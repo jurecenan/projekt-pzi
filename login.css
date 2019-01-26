@@ -2,7 +2,7 @@ header
 {
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(slika1.jpg);
     height:100vh;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
 
 }
@@ -81,7 +81,7 @@ h1{
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: darkgrey;
+    color: darkgray;
     
 }
 
