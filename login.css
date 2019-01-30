@@ -9,7 +9,7 @@ header
 
 .loginbox {
     width: 320px;
-    height: 420px;
+    
     background:black;
     top: 50%;
     left: 50%;
@@ -20,19 +20,19 @@ header
 }
 
 .avatar{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     position: absolute;
-    top: -20%;
-    left: calc(42% - 50px);
+    top: -10%;
+    left: calc(47% - 50px);
 }
 
 h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22;
+    font-size: 15;
     font-family: "Roboto",sans-serif ;
     color: white;
 
@@ -42,6 +42,7 @@ h1{
     margin: 0;
     padding: 0;
     font-weight: bold;
+    color: white;
 }
 
 .loginbox input{
@@ -87,4 +88,15 @@ h1{
 
 .loginbox a:hover{
     color:darkslateblue;
+}
+.error{
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: black;
+    border-radius:  5px;
+    text-align: left;
+    
 }

@@ -1,3 +1,6 @@
+<?php 
+    include('server.php');
+?>
 <!Doctype html>
 <html>
     <head>
@@ -14,17 +17,18 @@
             <div class="loginbox">
                 <img src="avatar.png" class="avatar">
                     <h1>Prijavi se ovdje</h1>
-                    <form>
+                    <form method="POST" action="prijava.php">
+                        <?php include("errors.php") ; //prikaz errora   ?>
                         <p>Korisnicko ime</p>
-                        <input type="text" name="" placeholder="Korisnicko Ime">
+                        <input type="text" name="username" placeholder="Korisnicko Ime" >
                         <p>Lozinka</p>
-                        <input type="password" name="" placeholder="Lozinka">
-                        <input type="submit" name="" value="Prijavi se">
+                        <input type="password" name="password" placeholder="Lozinka" >
+                        <input type="submit" name="prijava" value="Prijavi se" >
                         <div>
 
                         </div>
                         <a href="#">Zaboravili ste lozinku |</a>
-                        <a href="/projekt-pzi/index.html">| Nastavite kao gost</a>
+                        <a href="index.php">| Nastavite kao gost</a>
                     </form>
             
             </div>

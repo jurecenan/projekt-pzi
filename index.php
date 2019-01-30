@@ -1,3 +1,7 @@
+<?php include("server.php");
+    
+?>
+
 <!Doctype html>
 <html>
     <head>
@@ -14,30 +18,50 @@
         <header>
             <nav class="navbar fixed-top navbar-expand-md">
 
-            
+                
                
                 <ul class="main-nav">
-                    <li class="active"><a href="index.html">Naslovnica</a></li>
+                    <li class="active"><a href="index.php">Naslovnica</a></li>
                     <li><a href="">Koncerti</a></li>
                     <li><a href="">O nama</a></li>
                     <li><a href="">Vizija</a></li>
-                    <li><a href="login.html">Registracija</a></li>
+                    <li><a href="login.php">Registracija</a></li>
                 </ul>
-            </div>
+
+                <div class="content">
+                    <?php if (isset($_SESSION["success"])): ?>
+                        <div class="error success">
+                            <h3>
+                                <?php
+                                    //ispisuje you are now loged in 
+                                    echo $_SESSION["success"];
+                                    unset($_SESSION["success"]);
+                                ?>
+                            </h3>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (isset($_SESSION["username"])): ?>
+                        <p>Welcome <strong> <?php echo $_SESSION["username"]; ?></strong></p>
+                        <p><a href="index.php?logout='1'" style="color:red;">Logout</a></p>
+                    <?php endif ?>
+                </div>
+
+
             </nav>
             <div class="hero">
             <h1>Ime Stranice </h1>
             <h5>Online prodaja ulaznica</h5>
 
                 <div class="button">
-                    <a href="prijava.html" class="btn btn-one">Prijavi se</a>
-                    <a href="index.html" class="btn btn-two">Nastavi kao gost</a>
+                    <a href="prijava.php" class="btn btn-one">Prijavi se</a>
+                    <a href="index.php" class="btn btn-two">Nastavi kao gost</a>
                 </div>
             </div>
         </header>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
+        
     </body>
 </html>
