@@ -93,3 +93,15 @@ height: 250px;
    
 }
 
+.page-header > .content {
+    margin-top: 12%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.page-header {
+    color: #fff;
+}
+
