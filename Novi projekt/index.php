@@ -161,7 +161,7 @@
                                 <div class="carousel-caption d-none d-md-block">
                                   <h5>Zeljko Joksimovic</h5>
                                   <h4>Koprivnica 15.3.2019</h4>
-                                  <a href="" class="btn btn-simple btn-round btn-white btn-lg" target="_blank">Rezerviraj</a>
+                                  <a href="prijavatest.php" class="btn btn-simple btn-round btn-white btn-lg"  >Rezerviraj</a>
                                 </div>
                               </div>
                               <div class="carousel-item">
@@ -169,7 +169,7 @@
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Ivan Zak</h5>
                                     <h4>Arena Varazdin 9.3.2019</h4>
-                                    <a href="" class="btn btn-simple btn-round btn-white btn-lg" target="_blank">Rezerviraj</a>
+                                    <a href="prijavatest.php" class="btn btn-simple btn-round btn-white btn-lg"  >Rezerviraj</a>
                                 </div>
                               </div>
                               <div class="carousel-item">
@@ -177,7 +177,7 @@
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Bajaga i instruktori</h5>
                                     <h4>Arena Zagreb 6.3.2019</h4>
-                                    <a href="" class="btn btn-simple btn-round btn-white btn-lg" target="_blank">Rezerviraj</a>
+                                    <a href="prijavatest.php" class="btn btn-simple btn-round btn-white btn-lg"  >Rezerviraj</a>
                                 </div>
                               </div>
                               <div class="carousel-item active">
@@ -185,7 +185,7 @@
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Severina</h5>
                                     <h4>Donja Stubica 2.3.2019</h4>
-                                    <a href="" class="btn btn-simple btn-round btn-white btn-lg" target="_blank">Rezerviraj</a>
+                                    <a href="prijavatest.php" class="btn btn-simple btn-round btn-white btn-lg"  >Rezerviraj</a>
                                 </div>
                               </div>
                             </div>

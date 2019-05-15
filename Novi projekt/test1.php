@@ -1,4 +1,6 @@
 <?php
+
+
 //include auth.php file on all secure pages
 session_start();
 ?>
@@ -55,6 +57,7 @@ session_start();
             <div class="collapse navbar-collapse justify-content-end" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link" href="profil.php">Profil</a></li>
                           <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#vizija', 600);">Vizija</a></li>
                           <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#koncerti', 600);">Koncerti</a></li>
                           <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#o-nama', 600);">O nama</a></li>
