@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 
@@ -54,10 +55,28 @@
             <div class="collapse navbar-collapse justify-content-end" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
-                          <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#vizija', 600);">Vizija</a></li>
-                          <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#koncerti', 600);">Koncerti</a></li>
-                          <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#o-nama', 600);">O nama</a></li>
-                          <li class="nav-item"><a class="nav-link" href="prijavatest.php">Registracija/Login</a></li>
+
+                      <li 
+                        <?php if (empty ($_SESSION['username'])) echo "class='display-none';";
+                          else echo "class='nav-item';" ?>  >
+                          <a class="nav-link" href="profil.php">Profil</a></li>
+
+                      <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#vizija', 600);">Vizija</a></li>
+                      <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#koncerti', 600);">Koncerti</a></li>
+                      <li class="nav-item"><a class="nav-link" onclick="scrollToElement('#o-nama', 600);">O nama</a></li>
+                      <li 
+                        <?php if (empty ($_SESSION['username'])) echo "class='nav-item';";
+                          else echo "class='display-none';" ?> >
+                          <a class="nav-link" href="prijavatest.php">Registracija/Login</a></li>
+                          
+                      <li 
+                        <?php if (empty ($_SESSION['username'])) echo "class='display-none';";
+                          else echo "class='nav-item';" ?>  >
+                                <a class="nav-link">Prijavljeni ste kao <?php echo $_SESSION['username']; ?></a></li>
+                      <li 
+                        <?php if (empty ($_SESSION['username'])) echo " class='display-none';";
+                          else echo "class='nav-item';"; ?>   ><a class="nav-link" href="logout.php">Odjava</a></li> 
+                          
                           
                     </ul>
               </div>

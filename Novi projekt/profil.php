@@ -1,8 +1,11 @@
 <?php
 
-
-//include auth.php file on all secure pages
 session_start();
+
+if(empty($_SESSION['username'])){
+	header('Location: prijavatest.php');
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +29,7 @@ session_start();
   <link rel="stylesheet" href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/css/bootstrap.min.css">
   <link href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/css/now-ui-kit.min.css?v1.2.0" rel="stylesheet"/>
   <link href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/demo/demo.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" type="text/css">  
+  <link rel="stylesheet" href="style3.css"  type="text/css">  
   <style>
     .navbar .navbar-nav .nav-link:not(.btn) i.fa{
       font-size: 18px;
@@ -35,6 +38,8 @@ session_start();
       text-align: center;
       width: 21px;
     }
+
+    
   </style>
 
 </head>
@@ -45,7 +50,7 @@ session_start();
     <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand"  data-placement="bottom"  onclick="scrollToElement('#index', 600);">
+                <a class="nav-link"  href="index.php">
                     REZ-N
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,19 +75,19 @@ session_start();
     <div class="wrapper">
         <div class="page-header clear-filter" filter-color="orange">
             <div class="page-header-image" data-parallax="true" style="background-image: url('https://cdn.allwallpaper.in/wallpapers/2400x1350/8754/music-concert-2400x1350-wallpaper.jpg');">
-            
-            
+                </div>
+            <div class="container1">
             <?php
             $con = mysqli_connect('localhost','root','','projekt'); //The Blank string is the password
             mysqli_select_db($con, 'projekt');
 
-            $query = "SELECT * FROM korisnik"; //You don't need a ; like you do in SQL
+            $query = "SELECT * FROM rezervacija"; //You don't need a ; like you do in SQL
             $result = mysqli_query($con,$query);
 
             echo "<table>"; // start a table tag in the HTML
 
             while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-            echo "<tr><td>" . $row['username'] . "</td><td>" . $row['email'] . "</td><td>" . $row['password'] . "</td></tr>";  //$row['index'] the index here is a field name
+            echo "<tr><td>" . $row['id_korisnik'] . "</td><td>" . $row['datum'] . "</td><td>" . $row['mjesto'] . "</td></tr>";  //$row['index'] the index here is a field name
             }
 
             echo "</table>"; //Close the table in HTML

@@ -33,7 +33,7 @@ if($count == 1){
 elseif($num == 1){
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    header('location:test1.php');
+    header('location:index.php');
     echo "Uspjesna prijava!)";
 }
 
